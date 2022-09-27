@@ -92,11 +92,7 @@ function getDataFromLocalStorage() {
 }
 
 function deleteTaskWith(taskId) {
-  // For Explain Only
-  // for (let i = 0; i < arrayOfTasks.length; i++) {
-  //   console.log(`${arrayOfTasks[i].id} === ${taskId}`);
-  // }
-  arrayOfTasks = arrayOfTasks.filter((task) => task.id !== taskId);
+  arrayOfTasks = arrayOfTasks.filter((task) => task.id != taskId);
   addDataToLocalStorageFrom(arrayOfTasks);
 }
 
